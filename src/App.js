@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import { useEffect, useState } from "react";
 import Service from "./api";
 
-
 function App() {
   const [users, setUsers] = useState("")
   const [filters, setFilters] = useState("")
@@ -17,12 +16,6 @@ function App() {
       console.log(users)
     })
   }, [])
-
-  const search = () => {
-    const filterUsers = users.filter((item) => { item.name.toLowerCase().includes(filters) })
-    return setUsers(filterUsers)
-  }
-
 
   return (
     <>
